@@ -1,0 +1,62 @@
+<html>
+<head>
+<script>
+function insert(num){
+document.form.text.value=document.form.text.value+num;
+}
+function equal(){
+var exp=document.form.text.value;
+if(exp){
+document.form.text.value=eval(exp)
+}
+}
+function c(){
+document.form.text.value="";
+}
+function back(){
+var exp=document.form.text.value;
+document.form.text.value=exp.substring(0,exp.length-1);
+}
+</script>
+<style>
+.q{
+width:50;
+height:50;
+font-size:25;
+margin:2;
+cursor:pointer;
+}
+.text{
+width:223.5;
+height:50;
+margin:2;
+font-size;
+padding:5;
+}
+</style>
+</head>
+<body>
+<div class="main">
+<form name="form">
+<input class="text" name="text"><br>
+</form>
+<button type="submit" onclick="c()" class="q">C</button>
+<button type="submit" onclick="back()" class="q"><</button>
+<button type="submit" onclick="insert('/')" class="q">/</button>
+<button type="submit" onclick="insert('*')" class="q">*</button><br>
+<button type="submit" onclick="insert(7)" class="q">7</button>
+<button type="submit" onclick="insert(8)" class="q">8</button>
+<button type="submit" onclick="insert(9)" class="q">9</button>
+<button type="submit" onclick="insert('-')" class="q">-</button><br>
+<button type="submit" onclick="insert(4)" class="q">4</button>
+<button type="submit" onclick="insert(5)" class="q">5</button>
+<button type="submit" onclick="insert(6)" class="q">6</button>
+<button type="submit" onclick="insert('+')" class="q">+</button><br>
+<button type="submit" onclick="insert(1)" class="q">1</button>
+<button type="submit" onclick="insert(2)" class="q">2</button>
+<button type="submit" onclick="insert(3)" class="q">3</button>
+<button type="submit" onclick="insert('.')" class="q">.</button><br>
+<button type="submit" onclick="insert(0)" style="width:108" class="q">0</button>
+<button type="submit" onclick="equal()" style="width:108" class="q">=</button>
+</body>
+</html>
